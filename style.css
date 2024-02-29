@@ -1,0 +1,119 @@
+body{
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: hsl(46, 86%, 94%);
+}
+
+.container{
+    position: relative;
+    width: 450px;
+    height: 526px;
+    background-color: hsl(40, 26%, 64%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    font-weight: bold;
+}
+
+h1{
+    position: absolute;
+    top: -16%;
+    font-size: 3rem;
+    color: black;
+    text-decoration: overline underline  ;
+}
+
+.serial-no{
+    position: absolute;
+    font-size: 1.3rem;
+    top: 0;
+}
+
+.imageText{
+    position: absolute;
+    font-size: 1.3rem;
+    bottom: 0;
+}
+
+.slides{
+    position: relative;
+    height: 82%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: hsl(39, 38%, 79%);
+    overflow: hidden;
+    padding: 8px;
+}
+
+button{
+    font-size: 2.2rem;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(39, 38%, 79%);
+    font-weight: bold;
+    padding: 0 4px;
+    top: 94%;
+    transform: translateY(-50%);
+}
+
+.left{
+    position: absolute;
+    left: 5%;
+}
+
+.right{
+    position: absolute;
+    right: 5%;
+}
+
+.image{
+    width: 100%;
+    margin: 0 3% 0 0;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.displaySlide{
+    display: block;
+    animation: slide 1s ease-in;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        margin: 0 0 4% 0;
+    }
+
+    button{
+        top: 104%;
+    }
+
+    .left{
+        position: absolute;
+        left: 5%;
+    }
+    
+    .right{
+        position: absolute;
+        right: 5%;
+    }
+}
